@@ -19,7 +19,7 @@ const Sidebar = () => {
             <h2 className=" ">TechNest</h2>
           </Link>
         </section>
-        <div className="">
+        <div className=""> {/* the divs dosent do anything. changes in the sidelink section.*/}
           <SideLink icon={FaUsers} path="/users" title="Users" />
           <SideLink
             icon={GiPerspectiveDiceSixFacesRandom}
