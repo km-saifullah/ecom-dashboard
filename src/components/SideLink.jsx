@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 const SideLink = ({ icon: Icon, path, title }) => {
   return (
     <section className="flex items-center justify-between mt-6">
-      <section className="">
-        <div>
-          <Icon className="text-text group-hover:text-white text-2xl" />
-        </div>
-        <h3 className="">
+      <div className="cursor-pointer">
+      <div className="flex items-center text-lg font-medium font-inter gap-4 ">
+          <Icon className="group-hover:text-white text-2xl opacity-60 " />
+          <h3 className="">
           <Link to={path}>{title}</Link>
         </h3>
-      </section>
+      </div>
+      </div>
       <section>
         <IoIosArrowForward className="" />
       </section>

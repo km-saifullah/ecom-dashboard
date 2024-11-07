@@ -12,38 +12,41 @@ import SideLink from "../../components/SideLink";
 
 const Sidebar = () => {
   return (
-    <main className="h-[100vh] w-[250px] p-5">
+    <main className="h-[100vh] w-[200px]">
       <section className="">
         <section className="py-6 space-y-6">
           <Link to="/">
-            <h2 className="">
-              TechNest
-            </h2>
+            <h2 className=" ">TechNest</h2>
           </Link>
-          <p className="">
-            Admin Panel
-          </p>
         </section>
-        <SideLink icon={FaUsers} path="/users" title="Users" />
-        <SideLink
-          icon={GiPerspectiveDiceSixFacesRandom}
-          path="/product-variations"
-          title="Variation"
-        />
-        <SideLink icon={TbCategory2} path="/categories" title="Category" />
-        <SideLink
-          icon={MdOutlineCategory}
-          path="/sub-category"
-          title="Sub Category"
-        />
-        <SideLink icon={CiShop} path="/products" title="Products" />
-        <SideLink
-          icon={MdOutlineInventory2}
-          path="/inventories"
-          title="Inventory"
-        />
-        <SideLink icon={FaCartPlus} path="carts" title="Cart" />
-        <SideLink icon={IoSettingsSharp} path="settings" title="Settings" />
+        <div className="">
+          <SideLink icon={FaUsers} path="/users" title="Users" />
+          <SideLink
+            icon={GiPerspectiveDiceSixFacesRandom}
+            path="/product-variations"
+            title="Variation"
+          />
+        </div>
+        <div>
+          <SideLink icon={TbCategory2} path="/categories" title="Category" />
+          <SideLink
+            icon={MdOutlineCategory}
+            path="/sub-category"
+            title="Sub Category"
+          />
+        </div>
+        <div>
+          <SideLink icon={CiShop} path="/products" title="Products" />
+          <SideLink
+            icon={MdOutlineInventory2}
+            path="/inventories"
+            title="Inventory"
+          />
+        </div>
+        <div>
+          <SideLink icon={FaCartPlus} path="carts" title="Cart" />
+          <SideLink icon={IoSettingsSharp} path="settings" title="Settings" />
+        </div>
       </section>
     </main>
   );
