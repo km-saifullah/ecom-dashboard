@@ -19,34 +19,26 @@ const Sidebar = () => {
             <h2 className=" ">TechNest</h2>
           </Link>
         </section>
-        <div className=""> {/* the divs dosent do anything. changes in the sidelink section.*/}
-          <SideLink icon={FaUsers} path="/users" title="Users" />
-          <SideLink
-            icon={GiPerspectiveDiceSixFacesRandom}
-            path="/product-variations"
-            title="Variation"
-          />
-        </div>
-        <div>
-          <SideLink icon={TbCategory2} path="/categories" title="Category" />
-          <SideLink
-            icon={MdOutlineCategory}
-            path="/sub-category"
-            title="Sub Category"
-          />
-        </div>
-        <div>
-          <SideLink icon={CiShop} path="/products" title="Products" />
-          <SideLink
-            icon={MdOutlineInventory2}
-            path="/inventories"
-            title="Inventory"
-          />
-        </div>
-        <div>
-          <SideLink icon={FaCartPlus} path="carts" title="Cart" />
-          <SideLink icon={IoSettingsSharp} path="settings" title="Settings" />
-        </div>
+        <SideLink icon={FaUsers} path="/users" title="Users" />
+        <SideLink
+          icon={GiPerspectiveDiceSixFacesRandom}
+          path="/variations"
+          title="Variation"
+        />
+        <SideLink icon={TbCategory2} path="/categories" title="Category" />
+        <SideLink
+          icon={MdOutlineCategory}
+          path="/sub-category"
+          title="Sub Category"
+        />
+        <SideLink icon={CiShop} path="/products" title="Products" />
+        <SideLink
+          icon={MdOutlineInventory2}
+          path="/inventories"
+          title="Inventory"
+        />
+        <SideLink icon={FaCartPlus} path="carts" title="Cart" />
+        <SideLink icon={IoSettingsSharp} path="settings" title="Settings" />
       </section>
     </main>
   );
