@@ -22,7 +22,7 @@ const Sidebar = () => {
         <SideLink icon={FaUsers} path="/users" title="Users" />
         <SideLink
           icon={GiPerspectiveDiceSixFacesRandom}
-          path="/product-variations"
+          path="/variations"
           title="Variation"
         />
         <SideLink icon={TbCategory2} path="/categories" title="Category" />

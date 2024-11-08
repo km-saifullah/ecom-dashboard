@@ -37,7 +37,7 @@ const Variation = () => {
           <li>/</li>
           <li>
             <NavLink
-              to="/product-variations"
+              to="/variations"
               className={({ isActive }) =>
                 `${
                   isActive
@@ -70,7 +70,7 @@ const Variation = () => {
                 className="w-full outline-none border border-borderColor p-3 rounded-lg"
               />
             </div>
-            <div className="bg-secondary px-3 py-2 text-white rounded-lg hover:transition-all hover:duration-300 hover:ease-linear hover:bg-primary">
+            <div className="bg-black px-3 py-2 text-white rounded-lg">
               <button onClick={handleCreateVariation}>Create Variation</button>
             </div>
           </div>
