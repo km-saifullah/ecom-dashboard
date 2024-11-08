@@ -2,9 +2,8 @@ import { HiOutlineBars3CenterLeft } from "react-icons/hi2";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosArrowForward, IoMdNotificationsOutline } from "react-icons/io";
-import Image from "../../components/Image";
-import avatar from "/randoProfileImg.jpeg";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ setIsOpen, isOpen }) => {
   const toggleSidebar = () => {
@@ -62,10 +61,10 @@ const Navbar = ({ setIsOpen, isOpen }) => {
                 <div className="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-md">
                   <ul>
                     <li className="py-2 px-4 hover:bg-gray-100">
-                      <a href="#">See Profile</a>
+                      <Link to="/profile">see profile</Link>
                     </li>
                     <li className="py-2 px-4 hover:bg-gray-100">
-                      <a href="#">Logout</a>
+                      <Link href="#">Logout</Link>
                     </li>
                   </ul>
                 </div>
