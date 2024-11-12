@@ -18,6 +18,7 @@ import Variation from "./pages/variation/Variation";
 import Category from "./pages/category/Category";
 import SubCategory from "./pages/subcategory/SubCategory";
 import Product from "./pages/product/Product";
+import Inventory from "./pages/inventory/Inventory";
 
 // / All Routes
 const router = createBrowserRouter(
@@ -35,6 +36,7 @@ const router = createBrowserRouter(
         <Route path="/categories" element={<Category />} />
         <Route path="/sub-category" element={<SubCategory />} />
         <Route path="/products" element={<Product />} />
+        <Route path="/inventories" element={<Inventory />} />
       </Route>
       <Route>
         <Route path="*" element={<NotFound />} />
