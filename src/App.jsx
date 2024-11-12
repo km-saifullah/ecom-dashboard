@@ -15,6 +15,7 @@ import UserProfile from "./pages/profile/UserProfile";
 
 import NotFound from "./pages/notfound/NotFound";
 import Variation from "./pages/variation/Variation";
+import Category from "./pages/category/Category";
 
 // / All Routes
 const router = createBrowserRouter(
@@ -23,13 +24,13 @@ const router = createBrowserRouter(
       <Route>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path ="/profile" element={<UserProfile/>} />
+        <Route path="/profile" element={<UserProfile />} />
       </Route>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
-
         <Route path="/users" element={<Users />} />
         <Route path="/variations" element={<Variation />} />
+        <Route path="/categories" element={<Category />} />
       </Route>
       <Route>
         <Route path="*" element={<NotFound />} />
