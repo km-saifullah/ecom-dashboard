@@ -6,6 +6,8 @@ const Product = () => {
     slug: "",
     category: "",
     subCategory: "",
+    thumbnail: "",
+    gallery: "",
   });
 
   //   handle product input fields
@@ -103,6 +105,39 @@ const Product = () => {
                 <option value="Category-1">Sub Category-1</option>
                 <option value="Category-2">Sub Category-2</option>
               </select>
+            </div>
+            <div className="flex flex-col space-y-3 w-[45%]">
+              <label
+                htmlFor=""
+                className="text-primary text-base font-medium font-inter"
+              >
+                Thumbnail
+              </label>
+              <input
+                type="file"
+                placeholder="Enter thumbnail"
+                name="thumbnail"
+                value={productInput.thumbnail}
+                onChange={handleProductInput}
+                className="w-full outline-none border border-borderColor p-3 rounded-lg"
+              />
+            </div>
+            <div className="flex flex-col space-y-3 w-[45%]">
+              <label
+                htmlFor=""
+                className="text-primary text-base font-medium font-inter"
+              >
+                Gallery
+              </label>
+              <input
+                type="file"
+                multiple
+                placeholder="Enter gallery images"
+                name="gallery"
+                value={productInput.gallery}
+                onChange={handleProductInput}
+                className="w-full outline-none border border-borderColor p-3 rounded-lg"
+              />
             </div>
             <div className="bg-black px-3 py-2 text-white rounded-lg">
               <button onClick={handleCreateProduct}>Create Product</button>
