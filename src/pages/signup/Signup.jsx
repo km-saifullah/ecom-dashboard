@@ -1,12 +1,14 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [inputFields, setInputFields] = useState({
-    fullName: "",
-    phoneNumber: "",
+    displayName: "",
     email: "",
     password: "",
+    phoneNumber: "",
+    role:""
   });
 
   // handle input fileds
@@ -14,19 +16,27 @@ const Signup = () => {
     const inputFieldsInfo = { ...inputFields };
     inputFieldsInfo[e.target.name] = e.target.value;
     setInputFields(inputFieldsInfo);
-    e.preventDefault();
   };
 
   // handle sign up
-  const handleSignUp = (e) => {
-    console.log(inputFields);
-    setInputFields({
-      fullName: "",
-      phoneNumber: "",
-      email: "",
-      password: "",
-    });
+  const handleSignUp = async (e) => {
     e.preventDefault();
+    try {
+      let res = await axios.post(
+        "http://localhost:8000/api/v1/users/create",
+        inputFields
+      );
+      console.log(res);
+      setInputFields({
+        displayName: "",
+        phoneNumber: "",
+        email: "",
+        password: "",
+        role:""
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <main>
@@ -41,26 +51,13 @@ const Signup = () => {
               <form action="">
                 <div className="flex flex-col space-y-2 pb-6">
                   <label htmlFor="" className="">
-                    Full Name
+                    Display Name
                   </label>
                   <input
                     type="text"
                     placeholder="Enter your fullname"
-                    name="fullName"
-                    value={inputFields?.fullName}
-                    onChange={handleInput}
-                    className=""
-                  />
-                </div>
-                <div className="flex flex-col space-y-2 pb-6">
-                  <label htmlFor="" className="">
-                    Phone Number
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter your phone number"
-                    name="phoneNumber"
-                    value={inputFields?.phoneNumber}
+                    name="displayName"
+                    value={inputFields.displayName}
                     onChange={handleInput}
                     className=""
                   />
@@ -73,7 +70,7 @@ const Signup = () => {
                     type="email"
                     placeholder="Enter your email"
                     name="email"
-                    value={inputFields?.email}
+                    value={inputFields.email}
                     onChange={handleInput}
                     className=""
                   />
@@ -86,7 +83,33 @@ const Signup = () => {
                     type="password"
                     placeholder="Enter your password"
                     name="password"
-                    value={inputFields?.password}
+                    value={inputFields.password}
+                    onChange={handleInput}
+                    className=""
+                  />
+                </div>
+                <div className="flex flex-col space-y-2 pb-6">
+                  <label htmlFor="" className="">
+                    Phone Number
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your phone number"
+                    name="phoneNumber"
+                    value={inputFields.phoneNumber}
+                    onChange={handleInput}
+                    className=""
+                  />
+                </div>
+                <div className="flex flex-col space-y-2 pb-6">
+                  <label htmlFor="" className="">
+                    Role
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your phone number"
+                    name="role"
+                    value={inputFields.role}
                     onChange={handleInput}
                     className=""
                   />
