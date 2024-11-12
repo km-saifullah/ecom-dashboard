@@ -48,7 +48,7 @@ const Category = () => {
                 htmlFor=""
                 className="text-primary text-base font-medium font-inter"
               >
-                Category Name
+                Slug
               </label>
               <input
                 type="text"

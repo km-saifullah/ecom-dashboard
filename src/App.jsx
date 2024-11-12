@@ -16,6 +16,7 @@ import UserProfile from "./pages/profile/UserProfile";
 import NotFound from "./pages/notfound/NotFound";
 import Variation from "./pages/variation/Variation";
 import Category from "./pages/category/Category";
+import SubCategory from "./pages/subcategory/SubCategory";
 
 // / All Routes
 const router = createBrowserRouter(
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
         <Route path="/users" element={<Users />} />
         <Route path="/variations" element={<Variation />} />
         <Route path="/categories" element={<Category />} />
+        <Route path="/sub-category" element={<SubCategory />} />
       </Route>
       <Route>
         <Route path="*" element={<NotFound />} />
