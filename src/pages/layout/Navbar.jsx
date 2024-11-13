@@ -36,9 +36,6 @@ const Navbar = ({ setIsOpen, isOpen }) => {
             <IoSearchOutline className="w-[30px] h-[30px] cursor-pointer opacity-40" />
           </div>
           <div className="cursor-pointer">
-            <IoSettingsOutline className="text-primary text-2xl" />
-          </div>
-          <div className="cursor-pointer">
             <IoMdNotificationsOutline className="text-primary text-2xl" />
           </div>
         </section>
@@ -53,7 +50,7 @@ const Navbar = ({ setIsOpen, isOpen }) => {
               />
             </div>
             <div className="relative inline-block">
-              <button className="text-sm font-medium text-base hover:text-gray-900">
+              <button className="font-medium text-base hover:text-gray-900">
                 John Doe
               </button>{" "}
               {/* the name will come from backend. test dummy. */}

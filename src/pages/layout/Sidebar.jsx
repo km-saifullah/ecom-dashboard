@@ -16,7 +16,7 @@ const Sidebar = () => {
       <section className="">
         <section className="py-6 space-y-6">
           <Link to="/">
-            <h2 className=" ">TechNest</h2>
+            <h2 className="text-black font-black text-xl">E-com Application</h2>
           </Link>
         </section>
         <SideLink icon={FaUsers} path="/users" title="Users" />
@@ -37,8 +37,7 @@ const Sidebar = () => {
           path="/inventories"
           title="Inventory"
         />
-        <SideLink icon={FaCartPlus} path="carts" title="Cart" />
-        <SideLink icon={IoSettingsSharp} path="settings" title="Settings" />
+        <SideLink icon={FaCartPlus} path="/carts" title="Cart" />
       </section>
     </main>
   );
