@@ -8,6 +8,7 @@ import { TbCategory2 } from "react-icons/tb";
 import { MdOutlineCategory } from "react-icons/md";
 import { IoSettingsSharp } from "react-icons/io5";
 import { CiShop } from "react-icons/ci";
+import { IoHomeOutline } from "react-icons/io5";
 import SideLink from "../../components/SideLink";
 
 const Sidebar = () => {
@@ -19,6 +20,7 @@ const Sidebar = () => {
             <h2 className="text-black font-black text-xl">E-com Application</h2>
           </Link>
         </section>
+        <SideLink icon={IoHomeOutline} path="/" title="Home" />
         <SideLink icon={FaUsers} path="/users" title="Users" />
         <SideLink
           icon={GiPerspectiveDiceSixFacesRandom}

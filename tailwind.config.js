@@ -21,12 +21,11 @@ export default {
       },
     },
     extend: {
-      colors: {
-      },
+      colors: {},
       fontFamily: {
         inter: '"Inter", sans-serif',
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
