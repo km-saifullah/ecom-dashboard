@@ -22,10 +22,10 @@ const Users = () => {
     setFilterGroup("");
   };
   return (
-    <>
+    <section className="mx-6">
       {/* filter system */}
       <section className="mb-12 ">
-        <h2 className="text-3xl capitalize font-medium py-3  ">filter</h2>
+        <h2 className="text-3xl capitalize font-medium py-3 text-primary  ">filter</h2>
         <div className="flex items-center justify-between ">
           <input
             className="border px-2 py-2 rounded-md w-[20rem] "
@@ -52,7 +52,7 @@ const Users = () => {
             <option value="admin">admins</option>
           </select>
           <div className="flex items-center gap-3">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button className="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Filter
             </button>
             <button
@@ -67,10 +67,10 @@ const Users = () => {
       {/* user List */}
       <section>
         <div className="border-b-2 outline-offset-8 py-3 flex justify-between items-center ">
-          <h2 className="text-3xl capitalize font-medium py-3  ">Users</h2>
+          <h2 className="text-3xl capitalize font-medium py-3 text-primary  ">Users</h2>
           <div className="flex items-center gap-3">
             <button>delete</button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button className="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               add user
             </button>
             <button>update</button>
@@ -78,7 +78,7 @@ const Users = () => {
         </div>
         <div>
           <table className="w-full border-collapse">
-            <thead>
+            <thead >
               <tr className=" border-b-2 outline-offset-8 ">
                 <th>Name</th>
                 <th>Email</th>
@@ -95,7 +95,7 @@ const Users = () => {
                 <td> active</td>
 
                 <td className="flex justify-end gap-3 ">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">
+                  <button className="bg-black hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">
                     Edit
                   </button>
                   <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">
@@ -107,7 +107,7 @@ const Users = () => {
           </table>
         </div>
       </section>
-    </>
+    </section >
   );
 };
 
